@@ -20,6 +20,7 @@ rescue StandardError
   exit
 end
 
+# 月ごとの日数
 month_day = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 # 1週目までの日数取得
