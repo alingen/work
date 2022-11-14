@@ -13,16 +13,16 @@ class Vend
     puts 'ドリンクをお選びください'
     puts '---------------'
     @items.each do |item|
-      puts "#{item.id}: #{item.name} #{item.price}円 #{item.inv}本"
+      puts "#{item.id}: #{item.name} #{item.price}円 #{item.stock}本"
     end
     puts '---------------'
   end
 
   def sell(suica, item, count, history, user_now)
     time_at = Time.now
-    item.inv = item.inv - 1
+    item.stock = item.stock - 1
     suica.money = suica.money - item.price
-    if item.inv < 0
+    if item.stock < 0
       puts "在庫がありません"
       false
       return
@@ -57,7 +57,7 @@ class Vend
   def availabale_item(items)
     puts '購入可能なドリンク'
     items.each do |n|
-      if n.inv != 0
+      if n.stock != 0
         puts n.name
       end
     end

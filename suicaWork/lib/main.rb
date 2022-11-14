@@ -23,9 +23,9 @@ users << User.new(age: user_age, gender: user_gender)
 
 suica = Suica.new(money: 0, users: users)
 items = []
-items << Item.new(name: 'コーラ', price: 120, inv: 5, id: 1)
-items << Item.new(name: 'レッドブル', price: 200, inv: 5, id:2)
-items << Item.new(name: '水', price: 100, inv: 5, id:3)
+items << Item.new(name: 'コーラ', price: 120, stock: 5, id: 1)
+items << Item.new(name: 'レッドブル', price: 200, stock: 5, id:2)
+items << Item.new(name: '水', price: 100, stock: 5, id:3)
 vend = Vend.new(items: items, sales: 0)
 
 user_now = suica.user_select(suica.users)

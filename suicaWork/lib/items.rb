@@ -1,12 +1,12 @@
 class Item
 
   attr_reader :name, :price, :id
-  attr_accessor :inv
+  attr_accessor :stock
 
-  def initialize(name:, price:, inv:, id:)
+  def initialize(name:, price:, stock:, id:)
     @name = name
     @price = price
-    @inv = inv
+    @stock = stock
     @id = id
   end
 end 
