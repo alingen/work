@@ -1,5 +1,4 @@
 class User
-
   attr_accessor :age, :gender
 
   def initialize(age:, gender:)
@@ -12,5 +11,4 @@ class User
   #     User.new(n)
   #   end
   # end
-
 end
