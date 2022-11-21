@@ -1,0 +1,60 @@
+[user]
+user_name
+email
+phone_number
+nickname
+introduction
+website
+birth
+profile_image
+avatar_image
+
+[tweet]
+user_id
+create_time
+content
+
+[like]
+user_id
+tweet_id
+time
+
+[retweet]
+user_id
+tweet_id
+time
+
+[follow]
+user_id
+followed_user_id
+
+[dm]
+user_id
+sent_user_id
+content
+
+[notification]
+user_id
+tweet_id
+done_user_id
+like_or_follow
+
+[bookmark]
+user_id
+tweet_id
+
+
+user 1--* tweet
+user 1--* like
+user 1--* retweet
+user 1--* follow
+user 1--* dm
+user 1--* dm
+user 1--* bookmark
+user 1--* notification
+user 1--* notification
+
+tweet 1--* like
+tweet 1--* retweet
+tweet 1--* notification
+tweet 1--* bookmark

@@ -1,0 +1,60 @@
+[user]
+user_name{label: "varchar(100), not null"}
+email{label: "varchar(100), not null"}
+phone_number{label: "varchar(100), null"}
+nickname{label: "varchar(100), not null"}
+introduction{label: "text, null"}
+website{label: "varchar(100), null"}
+birth{label: "date, null"}
+profile_image{label: "varchar(100), null"}
+avatar_image{label: "varchar(100), null"}
+
+[tweet]
+user_id{label: "bigint, not null"}
+create_time{label: "datetime, not null"}
+content{label: "text, not null"}
+
+[like]
+user_id{label: "bigint, not null"}
+tweet_id{label: "bigint, not null"}
+time{label: "datetime, not null"}
+
+[retweet]
+user_id{label: "bigint, not null"}
+tweet_id{label: "bigint, not null"}
+time{label: "datetime, not null"}
+
+[follow]
+user_id{label: "bigint, not null"}
+followed_user_id{label: "bigint, not null"}
+
+[dm]
+user_id{label: "bigint, not null"}
+sent_user_id{label: "bigint, not null"}
+content{label: "varchar(100), not null"}
+
+[notification]
+user_id{label: "bigint, not null"}
+tweet_id{label: "bigint, not null"}
+done_user_id{label: "bigint, not null"}
+notification_type{label: "varchar(10), not null"}
+
+[bookmark]
+user_id{label: "bigint, not null"}
+tweet_id{label: "bigint, not null"}
+
+
+user 1--* tweet
+user 1--* like
+user 1--* retweet
+user 1--* follow
+user 1--* dm
+user 1--* dm
+user 1--* bookmark
+user 1--* notification
+user 1--* notification
+
+tweet 1--* like
+tweet 1--* retweet
+tweet 1--* notification
+tweet 1--* bookmark
