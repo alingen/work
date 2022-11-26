@@ -1,5 +1,7 @@
 | URI  | HTTP method |
 | ---- | ----        |
+| /movie/new| POST|
+| /movie/index| GET
 | /movies/:id| GET |
 | /movies| POST|
 | /movies/:id| PUT |
